@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daniel Olorundare | Cybersecurity Portfolio</title>
+<meta name="description" content="Aspiring cybersecurity professional focused on DevSecOps, threat detection and endpoint security.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f5f7;--ink:#16202b;--muted:#566574;--line:#d5dce2;--accent:#0f6b6b;--panel:#e8edf0;color-scheme:light dark}
+@media(prefers-color-scheme:dark){:root{--bg:#11181f;--ink:#e6ecf0;--muted:#98a7b4;--line:#2b3742;--accent:#5fc4bd;--panel:#18222b}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 "Instrument Sans",system-ui,sans-serif}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:3rem 1.5rem 4rem;display:grid;grid-template-columns:260px 1fr;gap:4rem}
+aside{position:sticky;top:3rem;align-self:start}
+aside img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:4px;display:block;background:var(--panel)}
+h1{font:600 2rem/1.15 Newsreader,Georgia,serif;margin:1.25rem 0 .25rem}
+.role{color:var(--muted);margin:0 0 1.25rem}
+.contact{font-size:.95rem;margin:0;padding:0;list-style:none}
+.contact li+li{margin-top:.35rem}
+h2{font:600 1.5rem/1.2 Newsreader,Georgia,serif;margin:0 0 1rem}
+section+section{margin-top:3rem}
+.lede{font:400 1.35rem/1.5 Newsreader,Georgia,serif;margin:0}
+.job{border-top:1px solid var(--line);padding:1.5rem 0}
+.job:last-of-type{border-bottom:1px solid var(--line)}
+.job h3{font:600 1.2rem/1.3 Newsreader,Georgia,serif;margin:0}
+.job .tag{color:var(--muted);font-size:.95rem;margin:.2rem 0 .9rem}
+.job ul{margin:0 0 1rem;padding-left:1.15rem}
+.job li{margin:.3rem 0}
+.tools{font-size:.95rem;color:var(--muted);margin:0 0 1rem}
+.result{background:var(--panel);border-left:3px solid var(--accent);padding:.75rem 1rem;margin:0;border-radius:0 4px 4px 0}
+.result b{font-weight:600}
+.strengths{columns:2;column-gap:2rem;margin:0;padding-left:1.15rem}
+.strengths li{break-inside:avoid;margin:.35rem 0}
+footer{color:var(--muted);font-size:.9rem;margin-top:3rem}
+@media(max-width:800px){.wrap{grid-template-columns:1fr;gap:2rem;padding-top:2rem}aside{position:static;display:grid;grid-template-columns:120px 1fr;gap:1.25rem;align-items:center}h1{margin-top:0}.strengths{columns:1}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <aside>
+    <img src="assets/profile.jpg" alt="Portrait of Daniel Olorundare" width="480" height="640">
+    <div>
+      <h1>Daniel Olorundare</h1>
+      <p class="role">Aspiring cybersecurity professional focused on DevSecOps, threat detection and endpoint security</p>
+      <ul class="contact">
+        <li><a href="mailto:demilolaadedayo@gmail.com">demilolaadedayo@gmail.com</a></li>
+        <li><a href="http://www.linkedin.com/in/daniel-olorundare-57b8a2128">LinkedIn</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main>
+    <section>
+      <h2>Profile</h2>
+      <p class="lede">Hands-on cybersecurity professional with practical experience designing, deploying, testing and troubleshooting security controls in realistic lab environments.</p>
+      <p>During the Expadox cybersecurity internship, I contributed to three 14-day engagements covering secure software delivery, centralized threat detection, endpoint protection and vulnerability management. I focus on validating that controls detect real threats, not just that tools run successfully.</p>
+    </section>
+
+    <section>
+      <h2>Selected experience</h2>
+
+      <article class="job">
+        <h3>ResponseOne: Automated DevSecOps and Incident Response</h3>
+        <p class="tag">Project 3</p>
+        <p class="tools">GitHub Actions, Semgrep, Trivy, Gitleaks, OWASP ZAP, Shuffle SOAR, Slack, NVD API</p>
+        <ul>
+          <li>Built and validated a CI/CD security pipeline for OWASP Juice Shop.</li>
+          <li>Integrated SAST, SCA, secrets detection and DAST into the workflow.</li>
+          <li>Implemented severity gates that block builds for High/Critical findings and exposed secrets.</li>
+          <li>Tested each scanner with planted vulnerabilities: a synthetic AWS key, SQL injection patterns, a vulnerable dependency and a live ZAP finding.</li>
+          <li>Diagnosed and fixed false-positive gates, inconsistent alert filtering, scanner configuration issues, missing scan targets, exit-code failures and pipeline breakages.</li>
+        </ul>
+        <p class="result"><b>Impact:</b> A pipeline whose detection and notification paths were validated end to end rather than relying only on green builds.</p>
+      </article>
+
+      <article class="job">
+        <h3>MedCore Logistics: Hybrid Threat Detection and Monitoring</h3>
+        <p class="tag">Project 2 · Team Lead</p>
+        <p class="tools">Wazuh, Suricata, Tailscale, Action1, Atomic Red Team, AWS CloudTrail, Azure Activity Log</p>
+        <ul>
+          <li>Coordinated delivery of a monitoring environment for Windows and Linux endpoints plus AWS and Azure workloads.</li>
+          <li>Owned deployment of the Wazuh manager, indexer, dashboard and four endpoint agents.</li>
+          <li>Deployed Suricata on Linux and Windows, including custom rules and persistent Windows services.</li>
+          <li>Integrated Suricata network alerts into Wazuh for centralized visibility.</li>
+          <li>Validated brute-force and privilege-escalation detections and mapped them to MITRE ATT&amp;CK.</li>
+        </ul>
+        <p class="result"><b>Result:</b> End-to-end detection for key attack techniques. Follow-up work included tuning HTTP exfiltration detection and remediating critical endpoint vulnerabilities.</p>
+      </article>
+
+      <article class="job">
+        <h3>CyberNetwork: Endpoint Protection and Vulnerability Management</h3>
+        <p class="tag">Project 1 · Technical Lead</p>
+        <p class="tools">Wazuh, Action1, Tailscale, Ubuntu, Windows 10/11</p>
+        <ul>
+          <li>Led an endpoint security program covering four Windows and Ubuntu systems across two locations.</li>
+          <li>Built the encrypted Tailscale mesh and onboarded all endpoints without exposing inbound ports.</li>
+          <li>Deployed Wazuh and confirmed live telemetry from all four agents.</li>
+          <li>Installed Action1 agents and created a vulnerability baseline by CVE, severity and endpoint.</li>
+          <li>Configured centralized patch deployment for all managed endpoints with severity-based SLA targets.</li>
+        </ul>
+        <p class="result"><b>Result:</b> Centralized endpoint visibility, and patching turned from an ad hoc activity into a tracked, time-bound process. A comparison scan is the next step for measuring risk reduction.</p>
+      </article>
+    </section>
+
+    <section>
+      <h2>Core strengths</h2>
+      <ul class="strengths">
+        <li>DevSecOps security pipelines and severity-gate logic</li>
+        <li>SAST, SCA, secrets detection and DAST</li>
+        <li>SIEM/EDR deployment and endpoint onboarding</li>
+        <li>Network intrusion detection and custom rule development</li>
+        <li>Vulnerability assessment and patch management</li>
+        <li>Security testing with realistic attack simulations</li>
+        <li>MITRE ATT&amp;CK detection validation</li>
+        <li>Troubleshooting complex security tooling and CI/CD failures</li>
+      </ul>
+    </section>
+
+    <footer>&copy; 2026 Daniel Olorundare</footer>
+  </main>
+</div>
+</body>
+</html>
